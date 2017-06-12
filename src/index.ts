@@ -42,12 +42,12 @@ export function fromCode(code: string, level?: Level): Location {
     // find level from upper level to lower level
     if (quickSearch(Division.provinces, code)) {
       level = Level.Province
-      // } else if (quickSearch(Division.cities, code)) {
-      //   level = Level.City
-      // } else if (quickSearch(Division.areas, code)) {
-      //   level = Level.District
-      // } else if (quickSearch(Division.streets, code)) {
-      //   level = Level.Street
+    } else if (quickSearch(Division.cities, code)) {
+      level = Level.City
+    } else if (quickSearch(Division.areas, code)) {
+      level = Level.District
+    } else if (quickSearch(Division.streets, code)) {
+      level = Level.Street
     } else {
       throw new Error('not matched')
     }
@@ -59,5 +59,12 @@ export function fromCode(code: string, level?: Level): Location {
 }
 
 export function fromString(name: string, level?: Level): Location {
+  if (level === undefined || level === Level.Province) {
+    for (const province of Division.provinces) {
+      if (province.name.indexOf(name) !== -1) {
+        return new Province(province.code)
+      }
+    }
+  }
   return null
 }

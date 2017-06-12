@@ -2,7 +2,7 @@
 
 import * as division from '../src/index'
 
-describe('location-china', () => {
+describe('province', () => {
   describe('from', () => {
     test('fromCode', () => {
       let location: division.Location
@@ -12,6 +12,16 @@ describe('location-china', () => {
 
       location = division.from('650000')
       expect(location.name).toEqual('新疆维吾尔自治区')
+    })
+
+    test('fromString', () => {
+      let location: division.Location
+
+      location = division.from('天津')
+      expect(location.name).toEqual('天津市')
+
+      location = division.from('内蒙')
+      expect(location.name).toEqual('内蒙古自治区')
     })
   })
 

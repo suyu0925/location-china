@@ -1,10 +1,14 @@
 {
   "name": "location-china",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "typescript version for location of china",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "jest"
+    "start": "npm run build && npm run tslint && npm run copy-d",
+    "build": "tsc -p .",
+    "copy-d": "cpx \"./index.d.ts\" \"./dist/\"",
+    "test": "jest",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,7 @@
   "devDependencies": {
     "@types/jest": "^19.2.4",
     "@types/node": "^7.0.29",
+    "cpx": "^1.5.0",
     "jest": "^20.0.4",
     "ts-jest": "^20.0.6",
     "tslint": "^5.4.3",
