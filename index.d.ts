@@ -30,7 +30,7 @@ export function districts(): Location[]
 
 export function streets(): Location[]
 
-export function from(value: number | string, level?: Level)
+export function from(value: number | string, level?: Level): Location
 
 export function fromCode(code: string, level?: Level): Location
 
