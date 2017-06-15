@@ -22,13 +22,13 @@ export class Province extends Location {
   public toShort(): string
 }
 
-export function provinces()
+export function provinces(): Location[]
 
-export function cities()
+export function cities(): Location[]
 
-export function districts()
+export function districts(): Location[]
 
-export function streets()
+export function streets(): Location[]
 
 export function from(value: number | string, level?: Level)
 
