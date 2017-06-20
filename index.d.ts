@@ -22,7 +22,7 @@ export class Province extends Location {
   public toShort(): string
 }
 
-export const ChinaCode
+export const ChinaCode: string
 
 export function provinces(): Location[]
 
