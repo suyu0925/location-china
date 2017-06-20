@@ -8,6 +8,8 @@ import { quickSearch } from './utils'
 export { Level, Location } from './location'
 export { Province } from './province'
 
+export const ChinaCode = '10000'
+
 export function provinces() {
   return Division.provinces
 }
