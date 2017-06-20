@@ -22,6 +22,8 @@ export class Province extends Location {
   public toShort(): string
 }
 
+export const ChinaCode
+
 export function provinces(): Location[]
 
 export function cities(): Location[]
