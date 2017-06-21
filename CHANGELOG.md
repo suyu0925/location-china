@@ -1,3 +1,7 @@
+## v0.1.6
+
+* change ChinaCode to '100000'.
+
 ## v0.1.5
 
 * fix ChinaCode type.
