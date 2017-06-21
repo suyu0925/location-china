@@ -1,6 +1,6 @@
 {
   "name": "location-china",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "typescript version for location of china",
   "main": "./dist/index.js",
   "scripts": {
